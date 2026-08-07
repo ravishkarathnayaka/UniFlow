@@ -1,16 +1,88 @@
-# React + Vite
+# UniFlow
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+UniFlow is a student productivity hub designed to help manage university tasks, deadlines, learning activities, events, and weekly workload in one place.
 
-Currently, two official plugins are available:
+This project is being built as a hands-on software engineering and cloud learning journey, with a focus on understanding the technologies behind the application rather than simply following tutorials.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Current Status
 
-## React Compiler
+**UniFlow v0.1 — Foundation**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Currently implemented:
 
-## Expanding the ESLint configuration
+- React application created with Vite
+- Local development environment
+- Basic UniFlow dashboard
+- Responsive dashboard layout
+- Task and workload sample UI
+- Git version control
+- GitHub repository
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The next major milestone is deploying UniFlow to **Azure Static Web Apps** and learning how cloud deployment and CI/CD work.
+
+## Current Technology Stack
+
+- React
+- JavaScript
+- Vite
+- HTML
+- CSS
+- Git
+- GitHub
+
+Microsoft Azure services will be introduced progressively as the application develops.
+
+## Current Dashboard
+
+The current dashboard includes:
+
+- Task overview
+- Upcoming deadlines
+- Learning activity overview
+- Upcoming events
+- Upcoming task list
+- Task priorities
+- Weekly workload overview
+
+The data displayed at this stage is sample data and is not yet connected to persistent storage.
+
+## Development Roadmap
+
+UniFlow will gradually introduce:
+
+- Real task management
+- Azure Functions
+- REST APIs
+- Cloud data storage
+- Microsoft Entra ID
+- Azure Key Vault
+- Application Insights
+- Azure Monitor
+- GitHub Actions and CI/CD
+- Microsoft AI capabilities
+
+AI functionality will only be introduced after the core application is working reliably.
+
+## Learning Goals
+
+Through UniFlow, I aim to gain practical experience with:
+
+- Frontend application development
+- React fundamentals
+- Git and GitHub workflows
+- Cloud deployment
+- Serverless architecture
+- REST APIs
+- Cloud databases
+- Identity and access management
+- Cloud security
+- Monitoring and observability
+- CI/CD
+- AI API integration
+
+## Run Locally
+
+Install the project dependencies:
+
+```bash
+npm install
