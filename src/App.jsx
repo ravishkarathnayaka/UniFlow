@@ -12,7 +12,32 @@ function App() {
     status: 'Not Started',
   })
 
-  const [tasks, setTasks] = useState([])
+  const [tasks, setTasks] = useState([
+  {
+    id: 'task-1',
+    title: 'Network Security Assignment',
+    category: 'University Assignment',
+    dueDate: '2026-08-12',
+    priority: 'High',
+    status: 'Not Started',
+  },
+  {
+    id: 'task-2',
+    title: 'Azure Learning Module',
+    category: 'Learning',
+    dueDate: '2026-08-15',
+    priority: 'Medium',
+    status: 'In Progress',
+  },
+  {
+    id: 'task-3',
+    title: 'Project Documentation',
+    category: 'Personal Project',
+    dueDate: '2026-08-18',
+    priority: 'Low',
+    status: 'Not Started',
+  },
+])
 
   const handleSaveTask = () => {
     if (!newTask.title.trim()) {
@@ -157,7 +182,7 @@ function App() {
       <section className="overview">
         <div className="stat-card">
           <span>Tasks</span>
-          <strong>{6 + tasks.length}</strong>
+          <strong>{tasks.length}</strong>
           <small>3 due this week</small>
         </div>
 
@@ -203,32 +228,7 @@ function App() {
             </div>
           ))}
 
-          <div className="task">
-            <div>
-              <h3>Network Security Assignment</h3>
-              <p>University Assignment</p>
-            </div>
-
-            <span className="priority high">High</span>
-          </div>
-
-          <div className="task">
-            <div>
-              <h3>Azure Learning Module</h3>
-              <p>Learning</p>
-            </div>
-
-            <span className="priority medium">Medium</span>
-          </div>
-
-          <div className="task">
-            <div>
-              <h3>Project Documentation</h3>
-              <p>Personal Project</p>
-            </div>
-
-            <span className="priority low">Low</span>
-          </div>
+          
         </article>
 
         <article className="panel">
