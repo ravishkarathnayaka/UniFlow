@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 function App() {
@@ -12,32 +12,26 @@ function App() {
     status: 'Not Started',
   })
 
-  const [tasks, setTasks] = useState([
-  {
-    id: 'task-1',
-    title: 'Network Security Assignment',
-    category: 'University Assignment',
-    dueDate: '2026-08-12',
-    priority: 'High',
-    status: 'Not Started',
-  },
-  {
-    id: 'task-2',
-    title: 'Azure Learning Module',
-    category: 'Learning',
-    dueDate: '2026-08-15',
-    priority: 'Medium',
-    status: 'In Progress',
-  },
-  {
-    id: 'task-3',
-    title: 'Project Documentation',
-    category: 'Personal Project',
-    dueDate: '2026-08-18',
-    priority: 'Low',
-    status: 'Not Started',
-  },
-])
+  const [tasks, setTasks] = useState([])
+  useEffect(() => {
+    const loadTasks = async () => {
+      try {
+        const response = await fetch('/api/tasks')
+
+        if (!response.ok) {
+          throw new Error(`Failed to load tasks: ${response.status}`)
+        }
+
+        const data = await response.json()
+        setTasks(data)
+      } catch (error) {
+        console.error('Failed to load tasks:', error)
+      }
+    }
+
+    loadTasks()
+  }, [])
+
 
   const handleSaveTask = () => {
     if (!newTask.title.trim()) {
@@ -228,7 +222,7 @@ function App() {
             </div>
           ))}
 
-          
+
         </article>
 
         <article className="panel">
