@@ -122,4 +122,55 @@ Future versions will progressively introduce:
 
 AI functionality will only be introduced after the core application is working reliably.
 
+## Learning Goals
+
+Through UniFlow, I aim to gain practical experience with:
+
+- Frontend application development
+- React fundamentals
+- Git and GitHub workflows
+- Cloud deployment
+- CI/CD
+- Serverless architecture
+- REST APIs
+- Cloud databases
+- Identity and access management
+- Cloud security
+- Monitoring and observability
+- AI API integration
+
+## Run Locally
+
+Install the project dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+The local development URL will be displayed in the terminal, typically:
+
+```text
+http://localhost:5173
+```
+
+## Project Philosophy
+
+UniFlow is being developed as a real learning project rather than a tutorial-only application.
+
+Each technology is introduced when there is a genuine reason to use it, with an emphasis on understanding:
+
+- What the technology does
+- Why it is being used
+- How it works
+- What happens behind the scenes
+- Good development practices
+- Security and cost considerations
+- Lessons learned through implementation
+
 
